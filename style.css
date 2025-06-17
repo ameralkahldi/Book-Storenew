@@ -39,6 +39,10 @@ header{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: transform 0.3s ease;
+    border:1px solid #ccc;
+    
+      
+       
     
 }
 
@@ -47,10 +51,10 @@ header{
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 .image-center{
-    width: 50px;
-    display: block;
-   margin-left: auto;
-   margin-right: auto;
+    
+   max-width:100px;
+    display:block;
+     margin:0 auto;
 }
 .book-name{
     text-align: center;
@@ -79,7 +83,7 @@ header{
     justify-content: space-between;
  
  }
- .number-like{
+ .likeCount{
     padding: 10px;
     margin-left: 150px;
     
