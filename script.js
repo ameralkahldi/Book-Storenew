@@ -1,4 +1,4 @@
-books = [
+const books = [
   {
     id :1,
     name: "Die Geheimnisse des Ozeans",
@@ -9,245 +9,288 @@ books = [
     publishedYear: 2018,
     genre: "Fantasy",
     comments: [
-      {
-        name: "Leser123",
-        text: "Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat.",
-      },
-      {
-        name: "Bookworm84",
-        text: "Eine romantische Geschichte, die mein Herz berührt und mich zum Nachdenken gebracht hat.",
-      },
-      {
-        name: "FantasyFanatic",
-        text: "Eine spannende Fantasiewelt, die ich nur schwer aus der Hand legen konnte.",
-      },
-      {
-        name: "SciFiEnthusiast",
-        text: "Die Zeitreise-Elemente waren genial und haben die Story spannend gemacht.",
-      },
-      {
-        name: "ReadingAddict",
-        text: "Ein unvergessliches Buch, das mich auf eine magische Reise mitgenommen hat.",
-      },
+      { name: "Leser123", text: "Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat." },
+      { name: "Bookworm84", text: "Eine romantische Geschichte, die mein Herz berührt und mich zum Nachdenken gebracht hat." },
+      { name: "FantasyFanatic", text: "Eine spannende Fantasiewelt, die ich nur schwer aus der Hand legen konnte." },
+      { name: "SciFiEnthusiast", text: "Die Zeitreise-Elemente waren genial und haben die Story spannend gemacht." },
+      { name: "ReadingAddict", text: "Ein unvergessliches Buch, das mich auf eine magische Reise mitgenommen hat." },
     ],
   },
   {
-    id : 2,
-    name: "Der vergessene Pfad",
-    author: "Maximilian Schwarz",
-    likes: 980,
-    liked: false,
-    price: 14.5,
-    publishedYear: 2021,
-    genre: "Fantasy",
-    comments: [],
-  },
-  {
-    id : 3,
-    name: "Die Farben des Himmels",
-    author: "Laura Blau",
-    likes: 1520,
-    liked: true,
-    price: 22.95,
-    publishedYear: 2019,
-    genre: "Romantik",
-    comments: [
-      {
-        name: "LeserPeter",
-        text: "Die Handlung war fesselnd und die Charaktere unglaublich lebendig dargestellt.",
-      },
-      {
-        name: "BookLover21",
-        text: "Ein romantisches Meisterwerk, das mich tief berührt und bewegt hat.",
-      },
-      {
-        name: "FantasyNerd",
-        text: "Fantastische Welten und epische Abenteuer - genau mein Geschmack!",
-      },
-      {
-        name: "SciFiEnthusiast",
-        text: "Die Zeitreise-Elemente waren genial und haben die Story spannend gemacht.",
-      },
-      {
-        name: "ReadingAddict",
-        text: "Ein unvergessliches Buch, das mich auf eine magische Reise mitgenommen hat.",
-      },
-    ],
-  },
-  {
-    id :4,
-    name: "Das Rätsel der Zeit",
-    author: "Alexander Weiss",
-    likes: 750,
-    liked: false,
-    price: 18.0,
-    publishedYear: 2020,
-    genre: "Science-Fiction",
-    comments: [
-      {
-        name: "BuchKenner",
-        text: "Ein spannendes Abenteuer, das mich von Anfang an mitgerissen hat.",
-      },
-      {
-        name: "LeseWurm",
-        text: "Die Liebesgeschichte war herzergreifend und wunderschön geschrieben.",
-      },
-    ],
-  },
-  {
-    id : 5,
-    name: "Der letzte Wächter",
-    author: "Sabine Grün",
-    likes: 1300,
-    liked: true,
-    price: 16.75,
-    publishedYear: 2017,
-    genre: "Fantasy",
-    comments: [],
-  },
-  {
-    id :6,
-    name: "Im Schatten des Mondes",
-    author: "Philipp Silber",
-    likes: 890,
-    liked: false,
-    price: 12.3,
-    publishedYear: 2022,
-    genre: "Science-Fiction",
-    comments: [
-      {
-        name: "BücherLiebhaber",
-        text: "Eine magische Reise durch eine faszinierende Fantasiewelt, absolut fesselnd.",
-      },
-      {
-        name: "Leseratte",
-        text: "Ein packender Science-Fiction-Roman, der mich zum Nachdenken gebracht hat.",
-      },
-    ],
-  },
-  {
-    id : 7,
-    name: "Jenseits der Sterne",
-    author: "Oliver Schwarz",
-    likes: 1450,
-    liked: true,
-    price: 21.0,
-    publishedYear: 2015,
-    genre: "Science-Fiction",
-    comments: [
-      {
-        name: "Leser123",
-        text: "Ein fesselndes Abenteuer, das mich von Anfang bis Ende mitgerissen hat.",
-      },
-    ],
-  },
-  {
-    id : 8,
-    name: "Das verborgene Königreich",
-    author: "Elena Gold",
-    likes: 920,
-    liked: false,
-    price: 17.5,
-    publishedYear: 2020,
-    genre: "Fantasy",
-    comments: [
-      {
-        name: "Bookworm92",
-        text: "Ein faszinierendes Buch, das mich von der ersten Seite an gefesselt hat.",
-      },
-    ],
-  },
+      "name": "Die Geheimnisse des Ozeans",
+      "author": "Clara Meer",
+      "likes": 1250,
+      "liked": true,
+      "price": 19.99,
+      "publishedYear": 2018,
+      "genre": "Fantasy",
+      "comments": [
+        {
+          "name": "Leser123",
+          "comment": "Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat."
+        },
+        {
+          "name": "Bookworm84",
+          "comment": "Eine romantische Geschichte, die mein Herz berührt und mich zum Nachdenken gebracht hat."
+        },
+        {
+          "name": "FantasyFanatic",
+          "comment": "Eine spannende Fantasiewelt, die ich nur schwer aus der Hand legen konnte."
+        },
+        {
+          "name": "SciFiGuru",
+          "comment": "Ein cleverer Science-Fiction-Roman mit interessanten Zeitreise-Konzepten und Charakteren."
+        },
+        {
+          "name": "NovelLover",
+          "comment": "Ein Buch, das voller magischer Überraschungen steckt und mich begeistert hat."
+        }
+      ]
+    },
+    {
+      "name": "Der vergessene Pfad",
+      "author": "Maximilian Schwarz",
+      "likes": 980,
+      "liked": false,
+      "price": 14.50,
+      "publishedYear": 2021,
+      "genre": "Fantasy",
+      "comments": []
+    },
+    {
+      "name": "Die Farben des Himmels",
+      "author": "Laura Blau",
+      "likes": 1520,
+      "liked": true,
+      "price": 22.95,
+      "publishedYear": 2019,
+      "genre": "Romantik",
+      "comments": [
+        {
+          "name": "LeserPeter",
+          "comment": "Die Handlung war fesselnd und die Charaktere unglaublich lebendig dargestellt."
+        },
+        {
+          "name": "BookLover21",
+          "comment": "Ein romantisches Meisterwerk, das mich tief berührt und bewegt hat."
+        },
+        {
+          "name": "FantasyNerd",
+          "comment": "Fantastische Welten und epische Abenteuer - genau mein Geschmack!"
+        },
+        {
+          "name": "SciFiEnthusiast",
+          "comment": "Die Zeitreise-Elemente waren genial und haben die Story spannend gemacht."
+        },
+        {
+          "name": "ReadingAddict",
+          "comment": "Ein unvergessliches Buch, das mich auf eine magische Reise mitgenommen hat."
+        }
+      ]
+    },
+    {
+      "name": "Das Rätsel der Zeit",
+      "author": "Alexander Weiss",
+      "likes": 750,
+      "liked": false,
+      "price": 18.00,
+      "publishedYear": 2020,
+      "genre": "Science-Fiction",
+      "comments": [
+        {
+          "name": "BuchKenner",
+          "comment": "Ein spannendes Abenteuer, das mich von Anfang an mitgerissen hat."
+        },
+        {
+          "name": "LeseWurm",
+          "comment": "Die Liebesgeschichte war herzergreifend und wunderschön geschrieben."
+        }
+      ]
+    },
+    {
+      "name": "Der letzte Wächter",
+      "author": "Sabine Grün",
+      "likes": 1300,
+      "liked": true,
+      "price": 16.75,
+      "publishedYear": 2017,
+      "genre": "Fantasy",
+      "comments": []
+    },
+    {
+      "name": "Im Schatten des Mondes",
+      "author": "Philipp Silber",
+      "likes": 890,
+      "liked": false,
+      "price": 12.30,
+      "publishedYear": 2022,
+      "genre": "Science-Fiction",
+      "comments": [
+        {
+          "name": "BücherLiebhaber",
+          "comment": "Eine magische Reise durch eine faszinierende Fantasiewelt, absolut fesselnd."
+        },
+        {
+          "name": "Leseratte",
+          "comment": "Ein packender Science-Fiction-Roman, der mich zum Nachdenken gebracht hat."
+        }
+      ]
+    },
+    {
+      "name": "Jenseits der Sterne",
+      "author": "Oliver Schwarz",
+      "likes": 1450,
+      "liked": true,
+      "price": 21.00,
+      "publishedYear": 2015,
+      "genre": "Science-Fiction",
+      "comments": [
+        {
+          "name": "Leser123",
+          "comment": "Ein fesselndes Abenteuer, das mich von Anfang bis Ende mitgerissen hat."
+        }
+      ]
+    },
+    {
+      "name": "Das verborgene Königreich",
+      "author": "Elena Gold",
+      "likes": 920,
+      "liked": false,
+      "price": 17.50,
+      "publishedYear": 2020,
+      "genre": "Fantasy",
+      "comments": [
+        {
+          "name": "Bookworm92",
+          "comment": "Ein faszinierendes Buch, das mich von der ersten Seite an gefesselt hat."
+        }
+      ]
+    },
+    {
+      "name": "Liebe in Zeiten des Krieges",
+      "author": "Emilia Rot",
+      "likes": 1800,
+      "liked": true,
+      "price": 19.99,
+      "publishedYear": 2016,
+      "genre": "Romantik",
+      "comments": [
+        {
+          "name": "Bibliophile23",
+          "comment": "Die Fantasiewelt war so lebendig, ich konnte das Buch kaum aus der Hand legen."
+        },
+        {
+          "name": "StorySeeker",
+          "comment": "Eine unglaublich berührende Liebesgeschichte, die mich tief bewegt hat."
+        },
+        {
+          "name": "SciFiExplorer",
+          "comment": "Spannende Zukunftsvisionen und interessante Charaktere machten diesen Roman einzigartig."
+        }
+      ]
+    }
+  // ... باقي الكتب كما هي
 ];
-  const bookContainer = document.getElementById('bookContainer');
 
-    const commentsList = document.getElementById('commentsList');
-    
-    
-    let currentBookId = null;
-
-
+// دالة بدء التشغيل
 function init() {
   renderBooks();
-  heartUpdate();
- 
 }
 
+// ترسم كل الكتب في الـ DOM
 function renderBooks() {
-  let contentRef = document.getElementById("bookContainer");
-  for (let i = 0; i < books.length; i++) {
-    contentRef.innerHTML += getInventoryTemplate(i);
-  }
+  const container = document.getElementById("bookContainer");
+  container.innerHTML = "";  // تفضي المحتوى قبل الإضافة
+
+  books.forEach((book, index) => {
+    container.innerHTML += getBookTemplate(book, index);
+  });
+
+  // بعد الإنشاء نربط الأحداث (اللايكات وإضافة التعليقات)
+  attachEventListeners();
 }
-function getInventoryTemplate(i) {
+
+// قالب HTML لكل كتاب
+function getBookTemplate(book, index) {
   return `
-              
-                <div class="book-card">
-                <h2 class="book-name">${books[i].name}</h2>
-                <hr class="book-hr">
-                <img class="image-center" src="./img/book-36719_1280.png" alt="imgShow"">
-                <hr class="book-hr">
-                <div class="center-element">
-                <div class="book-price">${books[i].price} &euro;</div>
-                <p class="number-like" id="likeCount">${books[i].likes} </p>
-                <img src="./img/heart.png" class="heart" id="heart" onclick="heartUpdate()"></span>
-                </div>
-                <div class="book-meta">
-                    <p><strong>Autor:</strong> ${books[i].author}</p>
-                    <p><strong>Erscheinungsjahr:</strong> ${
-                      books[i].publishedYear
-                    }</p>
-                    <p><strong>Genre:</strong> ${books[i].genre}</p>
-                </div>
-                <div class="comments-section">
-                    <h4>Kommentare:</h4>
-                    ${
-                      books[i].comments.length > 0
-                        ? books[i].comments
-                            .map(
-                              (comments) =>
-                                `<div class="comment">
-                                <span class="comment-name">[${comments.name}]</span>  
-                                <p>${comments.text}</p>
-                            </div>`
-                            )
-                            .join("")
-                        : '<p class="no-comments">Keine Kommentare, schreibe du das erste</p>'
-                    }
-                        <div class="add-kommentare">
-                        <textarea class="textarea-name" id="newComment" placeholder="Schreibe deinen Kommentar..." required></textarea>
-                        <button onclick="addComment()" class="add-comment-btn" data-book-id="${books[i]}">
-                        <img class="paper-png" src="./img/paper-plane.png" alt="pap">
-                        </button></div>
-                   
-                `;}
+    <div class="book-card" data-index="${index}" style="border:1px solid #ccc; margin:10px; padding:10px; border-radius:6px;">
+      <h2 class="book-name">${book.name}</h2>
+      <hr>
+      <img src="./img/book-36719_1280.png" alt="imgShow" style="max-width:100px; display:block; margin:0 auto;">
+      <hr>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <div class="book-price">${book.price.toFixed(2)} &euro;</div>
+        <p>Likes: <span class="likeCount">${book.likes}</span></p>
+        <button class="likeBtn btn ${book.liked ? 'btn-danger' : 'btn-primary'}">
+          ${book.liked ? 'Unlike' : 'Like'}
+        </button>
+      </div>
+      <div class="book-meta">
+        <p><strong>Autor:</strong> ${book.author}</p>
+        <p><strong>Erscheinungsjahr:</strong> ${book.publishedYear}</p>
+        <p><strong>Genre:</strong> ${book.genre}</p>
+      </div>
+      <div class="comments-section" style="margin-top:10px;">
+        <h4>Kommentare:</h4>
+        <div class="comments-list">
+          ${
+            book.comments.length > 0
+              ? book.comments.map(c => `<div class="comment"><strong>[${c.name}]</strong>: ${c.text}</div>`).join("")
+              : `<p class="no-comments">Keine Kommentare, schreibe du das erste</p>`
+          }
+        </div>
+        <textarea class="newComment" placeholder="Schreibe deinen Kommentar..." rows="2" style="width: 100%; margin-top: 5px;"></textarea>
+        <button class="addCommentBtn btn btn-success" style="margin-top:5px;">Kommentar hinzufügen</button>
+      </div>
+    </div>
+  `;
+}
 
-                let commentAddRef = document.getElementById('newComment').value 
+// ربط الأحداث لكل زر
+function attachEventListeners() {
+  const bookCards = document.querySelectorAll(".book-card");
 
+  bookCards.forEach(card => {
+    const index = card.getAttribute("data-index");
+    const likeBtn = card.querySelector(".likeBtn");
+    const likeCount = card.querySelector(".likeCount");
+    const addCommentBtn = card.querySelector(".addCommentBtn");
+    const newCommentInput = card.querySelector(".newComment");
 
-                function addComment(i){
-                  if (books[i].comments === null) {
-                      books.comments[i].name.push(commentAddRef)
+    // حدث اللايك
+    likeBtn.addEventListener("click", () => {
+      const book = books[index];
+      if (book.liked) {
+        book.likes--;
+        book.liked = false;
+        likeBtn.textContent = "Like";
+        likeBtn.classList.remove("btn-danger");
+        likeBtn.classList.add("btn-primary");
+      } else {
+        book.likes++;
+        book.liked = true;
+        likeBtn.textContent = "Unlike";
+        likeBtn.classList.remove("btn-primary");
+        likeBtn.classList.add("btn-danger");
+      }
+      likeCount.textContent = book.likes;
+    });
 
-                    
-                  }
-                  renderBooks();
+    // حدث إضافة تعليق
+    addCommentBtn.addEventListener("click", () => {
+      const commentText = newCommentInput.value.trim();
+      if (!commentText) {
+        alert("Bitte schreibe einen Kommentar!");
+        return;
+      }
+      const book = books[index];
+      // إضافة التعليق باسم ثابت "Gast" (يمكنك تعديلها لإضافة إدخال اسم)
+      book.comments.push({ name: "Gast", text: commentText });
+      newCommentInput.value = "";
+      renderBooks(); // إعادة عرض الكتب لتحديث التعليقات
+    });
+  });
+}
 
-                }
-                const heartBtn = document.getElementById('heart') ;
-                const likeCountNumber = document.getElementById('likeCount')
-
-               function heartUpdate(){
-                for (let x = 0; x < books.comments.length; x++) {
-                  const heart = books[x];
-                  if(books.liked == true){
-                    books.likes++;
-                    
-
-
-                  }else 
-                  {
-                    books.likes;
-                  }
-                  
-                }
-               }
+// تفعيل عند تحميل الصفحة
+window.onload = init;
