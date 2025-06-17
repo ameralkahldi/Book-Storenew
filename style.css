@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+body{
+    max-width: 1000%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+header{
+    background-color:#0a222c ;
+    display: flex;
+    align-items: center;
+    height: 100px;
+
+}
+
+.header_logo{
+    display: ruby;
+    color: white;
+    padding: 10px;
+}
+.header_logo h1{
+    color: red;
+}
+.book-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.book-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.image-center{
+    width: 50px;
+    display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+.book-name{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+.book-hr{
+    height:3px;
+    
+}
+.heart{
+     font-size: 30px;
+      cursor: pointer;
+      color: red;
+      width: 20px;
+      height: 20px;
+    margin: 10px;
+      
+      
+      
+}
+ .center-element{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ 
+ }
+ .number-like{
+    padding: 10px;
+    margin-left: 150px;
+    
+ }
+ .book-price{
+    color: red;
+    font-weight: bold;
+    font-size: 1.2rem;
+    
+ }
+ .comments-section {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+ .comment {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+.comment-name {
+    font-weight: bold;
+    color: #3498db;
+}
+.textarea-name{
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    background-color: rgba(154, 193, 88, 0.321);
+    
+}
+
+.add-kommentare {
+    display: flex;
+    gap: 5px;
+}
+.add-comment-btn{
+     background-color:  rgba(154, 193, 88, 0.321);
+    border: none;
+    padding: 5px 5px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+
+}
+.paper-png{
+    width: 20px;
+    height: 20px;
+}
+.bookContainer{
+    height: 500px;
+}
