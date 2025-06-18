@@ -11,23 +11,28 @@ const books = [
     comments: [
       {
         name: "Leser123",
-        text: "Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat.",
+        comment:
+          "Ein faszinierendes Abenteuerbuch, das mich von der ersten Seite an gefesselt hat.",
       },
       {
         name: "Bookworm84",
-        text: "Eine romantische Geschichte, die mein Herz berührt und mich zum Nachdenken gebracht hat.",
+        comment:
+          "Eine romantische Geschichte, die mein Herz berührt und mich zum Nachdenken gebracht hat.",
       },
       {
         name: "FantasyFanatic",
-        text: "Eine spannende Fantasiewelt, die ich nur schwer aus der Hand legen konnte.",
+        comment:
+          "Eine spannende Fantasiewelt, die ich nur schwer aus der Hand legen konnte.",
       },
       {
         name: "SciFiEnthusiast",
-        text: "Die Zeitreise-Elemente waren genial und haben die Story spannend gemacht.",
+        comment:
+          "Die Zeitreise-Elemente waren genial und haben die Story spannend gemacht.",
       },
       {
         name: "ReadingAddict",
-        text: "Ein unvergessliches Buch, das mich auf eine magische Reise mitgenommen hat.",
+        comment:
+          "Ein unvergessliches Buch, das mich auf eine magische Reise mitgenommen hat.",
       },
     ],
   },
@@ -181,74 +186,30 @@ const books = [
       },
     ],
   },
-  {
-    name: "Das verborgene Königreich",
-    author: "Elena Gold",
-    likes: 920,
-    liked: false,
-    price: 17.5,
-    publishedYear: 2020,
-    genre: "Fantasy",
-    comments: [
-      {
-        name: "Bookworm92",
-        comment:
-          "Ein faszinierendes Buch, das mich von der ersten Seite an gefesselt hat.",
-      },
-    ],
-  },
-  {
-    name: "Liebe in Zeiten des Krieges",
-    author: "Emilia Rot",
-    likes: 1800,
-    liked: true,
-    price: 19.99,
-    publishedYear: 2016,
-    genre: "Romantik",
-    comments: [
-      {
-        name: "Bibliophile23",
-        comment:
-          "Die Fantasiewelt war so lebendig, ich konnte das Buch kaum aus der Hand legen.",
-      },
-      {
-        name: "StorySeeker",
-        comment:
-          "Eine unglaublich berührende Liebesgeschichte, die mich tief bewegt hat.",
-      },
-      {
-        name: "SciFiExplorer",
-        comment:
-          "Spannende Zukunftsvisionen und interessante Charaktere machten diesen Roman einzigartig.",
-      },
-    ],
-  },
 ];
 
-// دالة بدء التشغيل
 function init() {
   renderBooks();
 }
 
 function renderBooks() {
   const container = document.getElementById("bookContainer");
-  container.innerHTML = ""; // تفضي المحتوى قبل الإضافة
+  container.innerHTML = "";
 
-  books.forEach((book, index) => {
+  for (let index = 0; index < books.length; index++) {
+    const book = books[index];
     container.innerHTML += getBookTemplate(book, index);
-  });
+  }
 
-  // بعد الإنشاء نربط الأحداث (اللايكات وإضافة التعليقات)
   attachEventListeners();
 }
 
-// قالب HTML لكل كتاب
 function getBookTemplate(book, index) {
   return `
     <div class="book-card" data-index="${index}" >
       <h2 class="book-name">${book.name}</h2>
       <hr>
-      <img src="./img/book-36719_1280.png" class="image-center" alt="imgShow" >
+      <img src="./img/book-36719_1280.png" class="image-center" alt="imgShow">
       <hr>
       <div class ="center-element">
         <div class="book-price">${book.price.toFixed(2)} &euro;</div>
@@ -264,22 +225,24 @@ function getBookTemplate(book, index) {
         <p><strong>Erscheinungsjahr:</strong> ${book.publishedYear}</p>
         <p><strong>Genre:</strong> ${book.genre}</p>
       </div>
-      <div class="comments-section" style="margin-top:10px;">
-        <h4>Kommentare:</h4>
+      <div class="comments-section">
+        <h4 class="CommentText">Kommentare:</h4>
         <div class="comments-list">
           ${
             book.comments.length > 0
               ? book.comments
                   .map(
                     (c) =>
-                      `<div class="comment"><strong>[${c.name}]</strong>: ${c.text}</div>`
+                      `<div class="comment"><strong>[${c.name}]</strong>: ${c.comment} </div>`
                   )
                   .join("")
               : `<p class="no-comments">Keine Kommentare, schreibe du das erste</p>`
           }
         </div>
-        <textarea class="newComment" placeholder="Schreibe deinen Kommentar..." rows="2" style="width: 100%; margin-top: 5px;"></textarea>
-        <button class="addCommentBtn btn btn-success" style="margin-top:5px;">Kommentar hinzufügen</button>
+        <div class="addElemntComment">
+        <textarea class="newComment" placeholder="Schreibe deinen Kommentar..." rows="2"></textarea>
+        <button class="addCommentBtn">
+        <img src="./img/paper-plane.png" class="paperSendInfo" alt="imgShow"></button>
       </div>
     </div>
   `;
@@ -295,7 +258,7 @@ function attachEventListeners() {
     const addCommentBtn = card.querySelector(".addCommentBtn");
     const newCommentInput = card.querySelector(".newComment");
 
-    // event like
+  
     likeBtn.addEventListener("click", () => {
       const book = books[index];
       if (book.liked) {
@@ -314,7 +277,6 @@ function attachEventListeners() {
       likeCount.textContent = book.likes;
     });
 
-    // حدث إضافة تعليق
     addCommentBtn.addEventListener("click", () => {
       const commentText = newCommentInput.value.trim();
       if (!commentText) {
@@ -323,11 +285,9 @@ function attachEventListeners() {
       }
       const book = books[index];
 
-      book.comments.push({ name: "Gast", text: commentText });
+      book.comments.push({ name: "Gast", comment: commentText });
       newCommentInput.value = "";
       renderBooks();
     });
   });
 }
-
-
