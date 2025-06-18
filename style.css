@@ -26,8 +26,9 @@ header {
 .book-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 100px;
   margin-top: 20px;
+  gap: 100px;
+  align-items: center;
 }
 
 .book-card {
@@ -121,4 +122,89 @@ header {
 }
 .bookContainer {
   height: 500px;
+}
+
+@media (max-width: 768px) {
+  .book-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  .book-card {
+    height: auto;
+  }
+  .image-center {
+    max-width: 80px;
+  }
+  .book-name {
+    font-size: 1.2rem;
+  }
+  .likeCount {
+    margin-left: 0;
+    text-align: center;
+  }
+    
+}
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+  .header_logo {
+    margin-bottom: 10px;
+  }
+  .book-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .book-card {
+    height: auto;
+  }
+  .image-center {
+    max-width: 60px;
+  }
+}
+@media  (max-width: 360px) {
+  .book-container {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+  .book-card {
+    height: auto;
+    padding: 10px;
+  }
+  .image-center {
+    max-width: 50px;
+  }
+  .book-name {
+    font-size: 1rem;
+  }
+  .likeCount {
+    font-size: 0.8rem;
+    margin-left: 0;
+    text-align: center;
+  }
+    
+}
+@media  (max-width: 320px) {
+  .book-container {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+  .book-card {
+    height: auto;
+    padding: 5px;
+  }
+  .image-center {
+    max-width: 40px;
+  }
+  .book-name {
+    font-size: 0.9rem;
+  }
+  .likeCount {
+    font-size: 0.7rem;
+    margin-left: 0;
+    text-align: center;
+  }
+    
 }
