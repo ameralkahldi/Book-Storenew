@@ -5,7 +5,7 @@
 body {
   max-width: 1000%;
   margin: 0 auto;
-  padding: 20px;
+  
 }
 
 header {
@@ -28,7 +28,7 @@ header {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   margin-top: 20px;
   gap: 100px;
-  align-items: center;
+  
 }
 
 .book-card {
@@ -74,13 +74,13 @@ header {
   justify-content: space-between;
 }
 .likeCount {
-  padding: 10px;
-  margin-left: 120px;
+ 
+  margin-left: 100px;
 }
 .book-price {
   color: red;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
 }
 .comments-section {
   margin-top: 20px;
@@ -122,6 +122,11 @@ header {
 }
 .bookContainer {
   height: 500px;
+}
+.btn btn-danger{
+  -bs--btn-padding-x:0 ;
+  -bs--btn-padding-y:0 ;
+  padding: 4px 8px;
 }
 
 @media (max-width: 768px) {

@@ -115,7 +115,46 @@ const books = [
       },
     ],
   },
-];
+  {
+      "name": "Das verborgene Königreich",
+      "author": "Elena Gold",
+      "likes": 920,
+      "liked": false,
+      "price": 17.50,
+      "publishedYear": 2020,
+      "genre": "Fantasy",
+      "comments": [
+        {
+          "name": "Bookworm92",
+          "comment": "Ein faszinierendes Buch, das mich von der ersten Seite an gefesselt hat."
+        }
+      ]
+    },
+    {
+      "name": "Liebe in Zeiten des Krieges",
+      "author": "Emilia Rot",
+      "likes": 1800,
+      "liked": true,
+      "price": 19.99,
+      "publishedYear": 2016,
+      "genre": "Romantik",
+      "comments": [
+        {
+          "name": "Bibliophile23",
+          "comment": "Die Fantasiewelt war so lebendig, ich konnte das Buch kaum aus der Hand legen."
+        },
+        {
+          "name": "StorySeeker",
+          "comment": "Eine unglaublich berührende Liebesgeschichte, die mich tief bewegt hat."
+        },
+        {
+          "name": "SciFiExplorer",
+          "comment": "Spannende Zukunftsvisionen und interessante Charaktere machten diesen Roman einzigartig."
+        }
+      ]
+    }
+  ];
+
 
 function init() {
   renderBooks();
@@ -131,6 +170,7 @@ function renderBooks() {
   }
 
   attachEventListeners();
+  
 }
 
 function getBookTemplate(book, index) {
@@ -177,46 +217,54 @@ function getBookTemplate(book, index) {
   `;
 }
 
+function likeButton(book, likeBtn, likeCount) {
+  if (book.liked) {
+    book.likes--;
+    book.liked = false;
+    likeBtn.textContent = "Like";
+    likeBtn.classList.remove("btn-danger");
+    likeBtn.classList.add("btn-primary");
+  } else {
+    book.likes++;
+    book.liked = true;
+    likeBtn.textContent = "Unlike";
+    likeBtn.classList.remove("btn-primary");
+    likeBtn.classList.add("btn-danger");
+  }
+  likeCount.textContent = book.likes;
+}
+
+function addComment(book, newCommentInput) {
+  const commentText = newCommentInput.value.trim();
+  if (!commentText) {
+    alert("Bitte schreibe einen Kommentar!");
+    return;
+  }
+  book.comments.unshift({ name: "Gast", comment: commentText });
+  newCommentInput.value = "";
+  renderBooks();
+}
+
+function eventsToCard(card) {
+  const index = card.getAttribute("data-index");
+  const likeBtn = card.querySelector(".likeBtn");
+  const likeCount = card.querySelector(".likeCount");
+  const addCommentBtn = card.querySelector(".addCommentBtn");
+  const newCommentInput = card.querySelector(".newComment");
+  const book = books[index];
+
+  likeBtn.addEventListener("click", () => {
+   likeButton(book, likeBtn, likeCount);
+  });
+
+  addCommentBtn.addEventListener("click", () => {
+    addComment(book, newCommentInput);
+  });
+}
+
 function attachEventListeners() {
   const bookCards = document.querySelectorAll(".book-card");
-
-  bookCards.forEach((card) => {
-    const index = card.getAttribute("data-index");
-    const likeBtn = card.querySelector(".likeBtn");
-    const likeCount = card.querySelector(".likeCount");
-    const addCommentBtn = card.querySelector(".addCommentBtn");
-    const newCommentInput = card.querySelector(".newComment");
-
-  
-    likeBtn.addEventListener("click", () => {
-      const book = books[index];
-      if (book.liked) {
-        book.likes--;
-        book.liked = false;
-        likeBtn.textContent = "Like";
-        likeBtn.classList.remove("btn-danger");
-        likeBtn.classList.add("btn-primary");
-      } else {
-        book.likes++;
-        book.liked = true;
-        likeBtn.textContent = "Unlike";
-        likeBtn.classList.remove("btn-primary");
-        likeBtn.classList.add("btn-danger");
-      }
-      likeCount.textContent = book.likes;
-    });
-
-    addCommentBtn.addEventListener("click", () => {
-      const commentText = newCommentInput.value.trim();
-      if (!commentText) {
-        alert("Bitte schreibe einen Kommentar!");
-        return;
-      }
-      const book = books[index];
-
-      book.comments.unshift({ name: "Gast", comment: commentText });
-      newCommentInput.value = "";
-      renderBooks();
-    });
-  });
+  for (let i = 0; i < bookCards.length; i++) {
+    eventsToCard(bookCards[i]);
+  }
 }
