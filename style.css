@@ -60,14 +60,7 @@ header {
 .book-hr {
   height: 3px;
 }
-.heart {
-  font-size: 30px;
-  cursor: pointer;
-  color: red;
-  width: 20px;
-  height: 20px;
-  margin: 10px;
-}
+
 .center-element {
   display: flex;
   flex-direction: row;
@@ -123,16 +116,12 @@ header {
 .bookContainer {
   height: 500px;
 }
-.btn btn-danger{
-  -bs--btn-padding-x:0 ;
-  -bs--btn-padding-y:0 ;
-  padding: 4px 8px;
-}
 
 @media (max-width: 768px) {
   .book-container {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
+    padding: 20px;
   }
   .book-card {
     height: auto;
